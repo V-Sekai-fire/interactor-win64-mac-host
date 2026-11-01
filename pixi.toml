@@ -1,0 +1,14 @@
+[workspace]
+name = "interactor-win64-mac-host"
+channels = ["conda-forge"]
+platforms = ["osx-arm64"]
+
+[dependencies]
+nushell = "*"
+curl = "*"
+xz = "*"
+
+[tasks]
+install-wine = "nu scripts/install-wine.nu"
+run-win64 = "nu scripts/run-win64.nu"
+smoke = "nu scripts/smoke.nu"
